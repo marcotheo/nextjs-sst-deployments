@@ -28,7 +28,6 @@ The sst script spins up the following resource
 - Run the following for ecr access = `aws ecr get-login-password --region <yourawsregion> | docker login --username AWS --password-stdin <yourawsaccountnumber>.dkr.ecr.<yourawsregion>.amazonaws.com`
 - you must have a custom domain and a hosted zone id in route53 or else you need to modify the infra to use HTTP instead of HTTPS and remove the 1st step in sst config which are certificate creation for the domain
 - Make sure to add the following env variables:
-  `
 
   # ROUTE53
 
@@ -42,7 +41,6 @@ The sst script spins up the following resource
   ALB_PUBLIC_SUBNET2=provideCIDR
   EC2_PRIVATE_SUBNET1=provideCIDR
   EC2_PRIVATE_SUBNET2=provideCIDR
-  `
 
 # Deployment
 
