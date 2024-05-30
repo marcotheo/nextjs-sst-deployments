@@ -1,0 +1,7 @@
+{
+  "sortingMethod": "lineLength",
+  "plugins": [
+    "prettier-plugin-tailwindcss",
+    "./node_modules/prettier-plugin-sort-imports/dist/index.js"
+  ]
+}

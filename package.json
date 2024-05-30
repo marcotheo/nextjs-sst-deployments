@@ -1,0 +1,27 @@
+{
+  "name": "simple-sstion-nextjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sst dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "admin:dev": "npm run dev -w @simple-sstion-nextjs/admin",
+    "staff:dev": "npm run dev -w @simple-sstion-nextjs/staff",
+    "staff:build": "npm run build -w @simple-sstion-nextjs/staff",
+    "admin:build": "npm run build -w @simple-sstion-nextjs/admin"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sst": "ion"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.4",
+    "@types/aws-lambda": "8.10.137"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

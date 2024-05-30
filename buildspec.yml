@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing dependencies...
+      - aws ecr get-login-password --region <yourawsregion> | docker login --username AWS --password-stdin <yourawsaccountnumber>.dkr.ecr.<yourawsregion>.amazonaws.com
+      - npm install -g pnpm
+      - touch ~/.bashrc
+      - curl -fsSL https://ion.sst.dev/install | bash
+      - source ~/.bashrc
+      - export PATH=/root/.sst/bin:$PATH
+  build:
+    commands:
+      - echo Running Build...
+      - pnpm install
+      - echo Running Deployment...
+      - sst deploy --stage=production
