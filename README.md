@@ -31,16 +31,16 @@ The sst script spins up the following resource
 
   # ROUTE53
 
-  CUSTOM_DOMAIN=yourcustomdomain
-  HOSTED_ZONE_ID=yourhostedzoneid
+  - CUSTOM_DOMAIN=yourcustomdomain
+  - HOSTED_ZONE_ID=yourhostedzoneid
 
   # SUBNETS
 
-  NAT_PUBLIC_SUBNET=provideCIDR
-  ALB_PUBLIC_SUBNET1=provideCIDR
-  ALB_PUBLIC_SUBNET2=provideCIDR
-  EC2_PRIVATE_SUBNET1=provideCIDR
-  EC2_PRIVATE_SUBNET2=provideCIDR
+  - NAT_PUBLIC_SUBNET=provideCIDR
+  - ALB_PUBLIC_SUBNET1=provideCIDR
+  - ALB_PUBLIC_SUBNET2=provideCIDR
+  - EC2_PRIVATE_SUBNET1=provideCIDR
+  - EC2_PRIVATE_SUBNET2=provideCIDR
 
 # Deployment
 
